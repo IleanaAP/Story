@@ -1,0 +1,28 @@
+GIT LOCAL
+cd NombreCarpeta -> entras a la carpeta
+cd ~ -> te vas a tu carpeta raíz
+clear -> limpias la terminal
+mkdir NombreCarpeta -> creas una carpeta
+cd NombreCarpeta/ ->
+ls -> ves la lista de archivos dentro de la carpeta actual
+ls -a -> ves la lista de archivos dentro de la carpeta incluyendo los ocultos
+touch NombreArchivo.txt -> crea el archivo
+start NombreArchivo.txt -> abres el archivo
+git init -> inicializas un repositorio de git en la carpeta que te encuentras
+git status -> aqui ves el estaado de tus archivos (si no se han agregado a la etapa de staging, si ya lo hiciste)
+git add NombreArchivo.txt -> agregas el archivo a la etapa de staging
+git add . -> con el punto añades todos los archivos nuevos que no han pasado a la etapa de staging en vez de uno por uno
+git rm --cached -r . -> este comando deshace el git add . Es decir saca los archivos del staging.
+git commit -m "Mensaje identificador del commit" -> haces commit al archivo
+git log -> ves tu historial de commits hechos
+git diff NombreArchivo.txt -> con este comando de diff puedes ver las diferencias que hay en algun archivo al que le hiciste un commit al actual en tu computadora local
+git checkout NombreArchivo.txt -> con el comando checkout regresas tu archivo en git a tu archivo local, es decir a tu ultima version guardada
+//Para evitar hacer commit a ciertos archivos debes crear un archivo llamado .gitignore.txt y dentro de el escribir el nombre de los archivos. Uno por linea. Una vez guardado haces el git add . y el it commit -m ""
+
+CLONING:
+git clone https://github.com/austinzheng/swift-2048.git -> con este comando clonas un repositorio de github (por eso la url hay que copiarla) es decir en remoto, hacia tu working space, o sea local.
+
+
+GITHUB REMOTO
+git remote add origin https://github.com/IleanaAP/NombreRepositorio.git -> le dices a git que quieres enviar tu repositorio local a uno remoto. "Origin" es el nombre del remoto y siempre debe ser origin el primero.
+git push -u origin master -> aquí empujas el repositorio local al remoto origin a una rama(branch) llamada master(default/main branch de todos los commit).
